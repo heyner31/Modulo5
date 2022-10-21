@@ -1,0 +1,214 @@
+{% extends "core/base.html" %}
+{% block content %}
+{% load static %}
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Nosotros</h2>
+                <ol>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>Nosotros</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row content">
+                <div class="col-lg-6">
+                    <h2>Desarrollo de tecnología que se adapta a tus necesidades</h2>
+                    <h3>
+                        Abordamos todos los proyectos con pasión y profesionalismo,
+                        enfocándonos siempre en el crecimiento de tu empresa
+                    </h3>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        Nos apegamos a los estándares más estrictos de calidad, cuidandoF
+                        cada detalle desde el diseño hasta el rendimiento y seguridad de tu
+                        software, brindando una experiencia uniforme a los usuarios en todas
+                        las plataformas.
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="ri-check-double-line"></i> Utilizamos un enfoque de innovación centrado en el ser
+                            humano.
+                        </li>
+                        <li>
+                            <i class="ri-check-double-line"></i> Diseñamos con base en comportamientos de navegación,
+                            patrones de usabilidad y análisis de clics.
+                        </li>
+                        <li>
+                            <i class="ri-check-double-line"></i> Estudios de deseabilidad e intención.
+                        </li>
+                    </ul>
+                    <p class="fst-italic">
+                        Creamos tecnología que ofrece experiencias personalizadas y relevantes a los usuarios, con la
+                        finalidad de eliminar barreras que obstaculicen la conversión. <br><br>
+                        Resolvemos todas tus dudas y te proporcionamos soporte constante para que alcances tus objetivos
+                        asegurando la mejora constante del rendimiento de tus plataformas digitales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Equipo</h2>
+                <p>Nuestro equipo de trabajo duro</p>
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-lg-6">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic">
+                            <img src="{% static 'core/img/team/Leo.jpg' %}" class="img-fluid" alt="" />
+                        </div>
+                        <div class="member-info">
+                            <h4>Leonardo Gallegos</h4>
+                            <span>Ingeniero de software</span>
+                            <p>Explicabo voluptatem mollitia et repellat</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic">
+                            <img src="{% static 'core/img/team/Heyner.jpg' %}" class="img-fluid" alt="" />
+                        </div>
+                        <div class="member-info">
+                            <h4>Heyner Cruz</h4>
+                            <span>Ingeniero de software</span>
+                            <p>Aut maiores voluptates amet et quis</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic">
+                            <img src="{% static 'core/img/team/Gerardo.jpg' %}" class="img-fluid" alt="" />
+                        </div>
+                        <div class="member-info">
+                            <h4>Gerardo Martínez</h4>
+                            <span>Contador</span>
+                            <p>Quisquam facilis cum velit laborum corrupti</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Team Section -->
+
+    <!-- ======= Our Skills Section ======= -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestras habilidades</h2>
+            </div>
+
+            <div class="row skills-content">
+                <div class="col-lg-6">
+                    <div class="progress">
+                        <span class="skill">HTML <i class="val">100%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">CSS <i class="val">90%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">JavaScript <i class="val">75%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">Django <i class="val">83%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="progress">
+                        <span class="skill">PHP <i class="val">80%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">Photoshop <i class="val">55%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">Python <i class="val">70%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Skills Section -->
+</main>
+
+{% endblock %}
