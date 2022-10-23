@@ -1,0 +1,8 @@
+{% extends "core/base.html" %}
+{% block content %}
+{% load static %}
+{% include 'services/menu_services.html' %}
+
+{% include 'services/service_formulario.html' with btn_description='Crear servicio' %}
+
+{% endblock %}

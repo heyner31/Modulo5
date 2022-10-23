@@ -13,7 +13,9 @@
     <link href="{% static 'core/img/logo.png' %}" rel="icon">
     <link href="{% static 'core/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <link href="{% static 'core/vendor/animate.css/animate.min.css'  %}" rel="stylesheet">
     <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css'  %}" rel="stylesheet">
@@ -33,24 +35,19 @@
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="index.html">IA-WEB</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'core/img/features-5.png' %}" alt="" class="img-fluid"></a> -->
+            <h1 class="logo me-auto"><a href="{% url 'core:home' %}">IA-WEB</a></h1>
 
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="{% url 'core:home' %}" class="{% if request.path == '/' %} active {% endif %}">Inicio</a></li>
                     <li><a href="{% url 'core:about' %}" class="{% if request.path == '/about/' %} active {% endif %}">Nosotros</a></li>
 
-                    <li><a href="services.html">Servicios</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="{% url 'services:service_list' %}" class="{% if request.path == '/services/' %} active {% endif %}">Servicios</a></li>
 
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="index.html" class="getstarted">Get Started</a></li>
+                    <li><a href="{% url 'contact:contact' %}" class="{% if request.path == '/contact/' %} active {% endif %}">Contacto</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+            </nav>
 
         </div>
     </header>
@@ -68,12 +65,11 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-info">
-                            <h3>Sailor</h3>
+                            <h3>IA-WEB</h3>
                             <p>
-                                A108 Adam Street <br>
-                                NY 535022, USA<br><br>
-                                <strong>Phone:</strong> +1 5589 55488 55<br>
-                                <strong>Email:</strong> info@example.com<br>
+                                C. 17 299, Fundura Montebello,<br> 97113 Mérida, Yuc. <br><br>
+                                <strong>Phone:</strong> +52 999 238 245<br>
+                                <strong>Email:</strong> ia-web@hotmail.com<br>
                             </p>
                             <div class="social-links mt-3">
                                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -86,43 +82,38 @@
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
+                        <h4>Tecnologísa</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">HTML</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">CSS</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">DJANGO</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">PYTHON</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">PHP</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Services</h4>
+                        <h4>Algunos servicios</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Desarrollos de Aplicaciones Web</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Desarrollo de Aplicaciones Móviles</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Animación y Gráficos Web</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Desarrollo Web para Comercio Electrónico</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios de Integración Web</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-
+                        <h4>Nosotros</h4>
+                        <p>DESARROLLO DE TECNOLOGÍA QUE SE ADAPTA A TUS NECESIDADES</p>
                     </div>
 
                 </div>
             </div>
         </div>
-
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Sailor</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>IA-WEB</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
@@ -131,7 +122,8 @@
     </footer>
     <!-- End Footer -->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>

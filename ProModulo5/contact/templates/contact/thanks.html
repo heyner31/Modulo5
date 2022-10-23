@@ -1,0 +1,48 @@
+{% extends "core/base.html" %}
+{% block content %}
+{% load static %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Contacto</h2>
+                <ol>
+                    <li><a href="{% url 'core:home' %}">Inicio</a></li>
+                    <li>Contacto</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial-item">
+                        <h1>¡Gracias!</h1>
+
+                        <p class="display-6">
+
+                            Sus comentarios son útiles, nos pondremos en contacto pronto.Tu reseña significa mucho
+                            para
+                            nosotros y nos hacer ver, ¡que vamos por el buen camino! . Contamos con tu información de
+                            contacto, así que,
+                            ¡ya mismo te enviaremos la respuesta! Esperamos leerte pronto y,
+                            nuevamente, ¡gracias!
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+{% endblock %}
