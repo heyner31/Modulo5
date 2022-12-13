@@ -1,0 +1,58 @@
+{% extends "core/base.html" %}
+{% block content %}
+{% load static %}
+{% include 'services/menu_services.html' %}
+
+<div class="container">
+    <div class="row mt-5 pt-5">
+        <div class="col-md-9 mx-auto mb-1">
+            <table class="table table-bordered">
+                <thead class="text-danger">
+                    <tr>
+                        <th>Id</th>
+                        <th>Titulo</th>
+                        <th>Subtitulo</th>
+                        <th>Cantidad</th>
+                        <th>Costo</th>
+                        
+                    </tr>
+                </thead>
+                <tbody class="text-dark">
+                    {% for producto in pedido %}
+                        <tr>
+                            <td>{{producto.id}}</td>
+                            <td>{{producto.title}}</td>
+                            <td>{{producto.sub_title}}</td>
+                            <td>{{producto.quantity}}</td>
+                            <td>{{producto.cost}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="row mt-1">
+        <div class="col-md-9 mx-auto mb-2">
+            <div style="text-align: right;">
+                <samp class="text-dark">
+                    Total = {{total}}
+                </samp>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-1">
+        <div class="col-md-9 mx-auto mb-2">
+            <div id="button_submit" style="text-align: right;">
+                <a href="{% url 'services:create_pedido' %}" class="btn btn-outline-primary form-btn mx-1 mb-3">
+                    <samp class="spinner-border spinner-border-sm d-none"></samp>
+                    <i class="fas fa-paper-plane fa-fw"></i>Confirmar Pedido
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

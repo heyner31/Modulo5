@@ -10,6 +10,10 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+      <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
     <link href="{% static 'core/img/logo.png' %}" rel="icon">
     <link href="{% static 'core/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
@@ -45,6 +49,8 @@
                     <li><a href="{% url 'services:service_list' %}" class="{% if request.path == '/services/' %} active {% endif %}">Servicios</a></li>
 
                     <li><a href="{% url 'contact:contact' %}" class="{% if request.path == '/contact/' %} active {% endif %}">Contacto</a></li>
+
+                    <li><a href="#" onclick="verPedido()" class="{% if request.path == '/services/detalle_pedido/' %} active {% endif %} {% if request.path == '/services/create_pedido/' %} active {% endif %}">Carrito <span id='cart-badge' class="badge badge-danger text-dark">0</span></a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -52,7 +58,10 @@
         </div>
     </header>
     <!-- End Header -->
-
+    <form id="formaCarrito" action="{% url 'services:detalle_pedido' %}" method="post">
+      {% csrf_token %}
+      <input type="hidden" name="datos_pedido" id="datos_pedido">
+    </form>
 
     {% block content %} {% endblock %}
 
@@ -136,6 +145,55 @@
     <!-- Template Main JS File -->
     <script src="{% static 'core/js/main.js' %}"></script>
 
+    <script>
+    
+    if (localStorage.getItem('cart') == null){
+      localStorage.clear();
+      var cart = {};
+    }else {
+      cart = JSON.parse(localStorage.getItem('cart'));
+      show_badge_cart();
+    }
+
+    function show_badge_cart(){
+      var totalItems = 0;
+      if (localStorage.getItem('cart') != null) {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        for (var x in cart) {
+          totalItems += parseInt(cart[x]);
+        }
+      }
+      $('#cart-badge').text(totalItems.toString());
+    }
+
+
+    function agregaCarrito(id) {
+      if (cart[id] != undefined) {
+        cart[id] += 1;
+      }else{
+        cart[id] = 1;
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      show_badge_cart();
+    }
+
+    function verPedido(){
+      if (localStorage.getItem('cart') != null) {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        valores_pedido = '';
+        for (var x in cart) {
+          valores_pedido += x + "-" + cart[x] + "|";
+          
+        }
+        $('#datos_pedido').val(valores_pedido);
+        $('#formaCarrito').submit();
+
+
+      }
+    }
+
+    </script>
+    {% block contentJS %} {% endblock %}
 </body>
 
 </html>
